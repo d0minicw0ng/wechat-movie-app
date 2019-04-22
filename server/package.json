@@ -1,0 +1,27 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "WeChat movies app ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dominicwong617/wechat-movie-app.git"
+  },
+  "keywords": [
+    "wechat",
+    "movies"
+  ],
+  "author": "Dominic Wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dominicwong617/wechat-movie-app/issues"
+  },
+  "homepage": "https://github.com/dominicwong617/wechat-movie-app#readme",
+  "dependencies": {
+    "koa": "latest",
+    "pg": "latest"
+  }
+}
