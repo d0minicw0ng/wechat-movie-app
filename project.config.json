@@ -1,6 +1,6 @@
 {
   "miniprogramRoot": "./client",
-	"description": "Project configuration file",
+	"description": "Movies",
 	"packOptions": {
 		"ignore": []
 	},

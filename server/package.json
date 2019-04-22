@@ -22,6 +22,7 @@
   "homepage": "https://github.com/dominicwong617/wechat-movie-app#readme",
   "dependencies": {
     "koa": "latest",
-    "pg": "latest"
+    "pg": "latest",
+    "koa-router": "latest"
   }
 }
