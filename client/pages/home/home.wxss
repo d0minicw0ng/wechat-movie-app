@@ -1,0 +1,47 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50rpx;
+}
+
+.poster {
+  height: 750rpx;
+}
+
+.title {
+  margin-top: 20rpx; 
+}
+
+.review-container {
+  margin-top: 30rpx;
+  display: flex;
+}
+
+.reviewer {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.recommendation {
+  margin-left: 20rpx;
+  margin-top: 25rpx;
+  font-size: 32rpx;
+}
+
+.navbar-bottom {
+  border-top: 1rpx solid lightgrey;
+  background-color: white;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 30rpx;
+}
+
+.navbar {
+  color: lightgrey;
+  flex-grow: 1;
+  text-align: center;
+}

@@ -1,11 +1,11 @@
 {
-  "miniprogramRoot": "./client",
+	"miniprogramRoot": "client/",
 	"description": "Movies",
 	"packOptions": {
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,

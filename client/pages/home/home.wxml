@@ -1,0 +1,14 @@
+<view class="home-container">
+  <image class="poster" src="{{randomReview.image}}" mode="aspectFill"></image>
+  <view class="title">{{randomReview.title}}</view>
+
+  <view class="review-container">
+    <image class="reviewer" src="{{randomReview.profile_image}}"></image>
+    <view class="recommendation">{{randomReview.username}}向你推荐了一部电影</view>
+  </view>
+
+  <view class="navbar-bottom">
+    <view class="navbar">热门</view>
+    <view class="navbar">我的</view>
+  </view>
+</view>
