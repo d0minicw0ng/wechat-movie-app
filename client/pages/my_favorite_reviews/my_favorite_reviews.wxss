@@ -1,0 +1,61 @@
+.header {
+  text-align: center;
+  color: orange;
+  margin-top: 40rpx;
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  align-items: center;
+}
+
+.review-title {
+  font-weight: 700;
+}
+
+.review {
+  display: flex;
+  background-color: white;
+  margin-top: 30rpx;
+  width: 80%;
+}
+
+.poster {
+  height: 300rpx;
+  width: 200rpx;
+}
+
+.review-data {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+}
+
+.reviewer {
+  display: flex;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 10rpx;
+}
+
+.username {
+  margin-left: 10rpx;
+  margin-top: 5rpx;
+}
+
+.navigate-back {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  border: 1rpx solid lightgray;
+  color: lightgray;
+  text-align: center; 
+  width: 100%;
+  padding: 10rpx;
+}

@@ -38,13 +38,19 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "Movie page",
 					"pathName": "pages/movie/movie",
 					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "My reviews page",
+					"pathName": "pages/my_favorite_reviews/my_favorite_reviews",
 					"scene": null
 				}
 			]

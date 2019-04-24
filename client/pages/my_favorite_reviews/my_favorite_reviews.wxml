@@ -1,0 +1,20 @@
+<view class="header">收藏的影评</view>
+
+<view class="reviews-container">
+  <view class="review" wx:for="{{reviews}}" wx:key="id">
+    <image class="poster" src="{{item.image}}"></image>
+    <view class="review-data">
+      <view class="review-title">{{item.title}}</view>
+      <view class="review-content" wx:if="{{item.content}}">{{item.content}}</view>
+
+      <view class="reviewer">
+        <image class="profile-image" src="{{item.profile_image}}"></image>
+        <view class="username">{{item.username}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<navigator url="/pages/home/home">
+  <view class="navigate-back">回到首页</view>
+</navigator>

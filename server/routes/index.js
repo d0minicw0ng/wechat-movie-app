@@ -5,6 +5,8 @@ const reviewController = require('../controllers/review');
 const movieController = require('../controllers/movie.js');
 
 router.get('/reviews/random', reviewController.random);
+router.get('/reviews/my_favorites', reviewController.myFavorites);
+
 router.get('/movies/popular', movieController.popular);
 router.get('/movies/:id', movieController.findOne);
 

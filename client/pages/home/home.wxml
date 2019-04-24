@@ -9,6 +9,6 @@
 
   <view class="navbar-bottom">
     <view class="navbar" bindtap="goToPopularMoviesPage">热门</view>
-    <view class="navbar">我的</view>
+    <view class="navbar" bindtap="goToMyFavoriteReviewsPage">我的</view>
   </view>
 </view>

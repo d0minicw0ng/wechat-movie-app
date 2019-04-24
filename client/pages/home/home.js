@@ -29,6 +29,12 @@ Page({
   goToPopularMoviesPage() {
     wx.navigateTo({
       url: '/pages/movies/movies',
-    })
+    });
+  },
+
+  goToMyFavoriteReviewsPage() {
+    wx.navigateTo({
+      url: '/pages/my_favorite_reviews/my_favorite_reviews',
+    });
   }
 })

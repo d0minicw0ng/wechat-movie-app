@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/movies/movies",
-    "pages/movie/movie"
+    "pages/movie/movie",
+    "pages/my_favorite_reviews/my_favorite_reviews"
   ],
   "window": {
     "backgroundTextStyle": "light",
