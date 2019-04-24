@@ -1,0 +1,35 @@
+.movies-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+}
+
+.movie {
+  display: flex;
+  background-color: white;
+  border: 1rpx solid lightgray;
+  margin-top: 30rpx;
+  height: 250rpx;
+}
+
+.movie-poster {
+  width: 30%;
+  height: 250rpx;
+}
+
+.movie-description {
+  text-align: center;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.movie-title {
+  font-weight: 700;
+}
+
+.movie-category {
+  font-size: 30rpx;
+  margin-top: 15rpx;
+}

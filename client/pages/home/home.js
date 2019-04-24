@@ -25,5 +25,10 @@ Page({
         console.error(err);
       }
     })
+  },
+  goToPopularMoviesPage() {
+    wx.navigateTo({
+      url: '/pages/movies/movies',
+    })
   }
 })
