@@ -13,5 +13,16 @@ module.exports = {
     await pg.end();
 
     ctx.body = movies;
-  }
+  },
+
+  findOne: async (ctx, next) => {
+    const pg = new Client(config.pgConfig);
+    await pg.connect();
+    const res = await pg.query('SELECT * FROM movies WHERE id = $1', [ctx.params.id]);
+    const movie = res.rows[0];
+
+    await pg.end();
+
+    ctx.body = movie;    
+  },
 }
