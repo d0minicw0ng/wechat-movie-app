@@ -64,10 +64,9 @@ Page({
       },
       success: res => {
         const reviewId = res.data.id;
-        console.log(res.data);
-        // wx.navigateTo({
-        //   url: `/pages/reviews_list/reviews_list?movie_id=${movieId}`,
-        // });
+        wx.navigateTo({
+          url: `/pages/reviews_list/reviews_list?movie_id=${movieId}`,
+        });
 
         wx.removeStorageSync('current_pending_review_content')
       }

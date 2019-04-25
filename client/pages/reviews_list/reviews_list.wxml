@@ -1,0 +1,14 @@
+<view class="reviews-container">
+  <view class="review" wx:for="{{reviews}}" wx:key="id">
+    <view class="reviewer">
+      <image src="{{item.profile_image}}" class="profile-image"></image>
+      <view class="username">{{item.username}}</view>
+    </view>
+
+    <view class="content">{{item.content}}</view>
+  </view>
+</view>
+
+<navigator url="/pages/home/home" class="navigate-back">
+  回到首页
+</navigator>

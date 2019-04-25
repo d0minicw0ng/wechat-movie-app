@@ -7,6 +7,7 @@ const userController = require('../controllers/user.js');
 
 router.get('/reviews/random', reviewController.random);
 router.get('/reviews/my_favorites', reviewController.myFavorites);
+router.get('/reviews', reviewController.list);
 router.post('/reviews', reviewController.create);
 
 router.get('/movies/popular', movieController.popular);

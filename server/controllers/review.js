@@ -41,5 +41,16 @@ module.exports = {
     await pg.end();
 
     ctx.body = review; 
-  }
+  },
+
+  list: async (ctx, next) => {
+    const pg = new Client(config.pgConfig);
+    await pg.connect();
+    const res = await pg.query('SELECT * FROM reviews r JOIN users u ON r.user_id = u.id WHERE r.movie_id = $1', [ctx.query.movie_id]);
+    const reviews = res.rows;
+
+    await pg.end();
+
+    ctx.body = reviews;
+  },  
 }

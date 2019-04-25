@@ -7,7 +7,8 @@
     "pages/movie/movie",
     "pages/my_favorite_reviews/my_favorite_reviews",
     "pages/new_text_review/new_text_review",
-    "pages/check_review/check_review"
+    "pages/check_review/check_review",
+    "pages/reviews_list/reviews_list"
   ],
   "window": {
     "backgroundTextStyle": "light",

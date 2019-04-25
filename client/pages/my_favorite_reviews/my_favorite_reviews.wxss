@@ -48,14 +48,3 @@
   margin-left: 10rpx;
   margin-top: 5rpx;
 }
-
-.navigate-back {
-  position: fixed;
-  bottom: 0;
-  background-color: white;
-  border: 1rpx solid lightgray;
-  color: lightgray;
-  text-align: center; 
-  width: 100%;
-  padding: 10rpx;
-}

@@ -28,3 +28,14 @@ page {
   flex-grow: 1;
   text-align: center;
 }
+
+.navigate-back {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  border: 1rpx solid lightgray;
+  color: lightgray;
+  text-align: center; 
+  width: 100%;
+  padding: 10rpx;
+}

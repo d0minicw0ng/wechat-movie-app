@@ -1,0 +1,35 @@
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1rpx solid lightgray;
+  margin-top: 30rpx;
+}
+
+.reviewer {
+  display: flex;
+  flex-direction: row;
+  padding: 30rpx;
+}
+
+.profile-image {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+
+.username {
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+
+.content {
+  margin-top: 30rpx;
+  padding: 30rpx;
+}
