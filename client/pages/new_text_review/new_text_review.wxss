@@ -1,0 +1,36 @@
+.movie-container {
+  background-color: white;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 60rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30rpx;
+  border: 1rpx solid lightgray;
+}
+
+.movie-poster {
+  width: 300rpx;
+  height: 400rpx;
+  position: relative;
+  bottom: 40rpx;
+}
+
+.movie-title {
+  font-weight: 700;
+  padding-left: 40rpx;
+  padding-right: 40rpx;  
+}
+
+.review-input {
+  margin-top: 30rpx;
+}
+
+.finish {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}

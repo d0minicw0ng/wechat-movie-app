@@ -38,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -51,6 +51,14 @@
 					"id": -1,
 					"name": "My reviews page",
 					"pathName": "pages/my_favorite_reviews/my_favorite_reviews",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "New text review page",
+					"pathName": "pages/new_text_review/new_text_review",
+					"query": "movie_id=1",
 					"scene": null
 				}
 			]

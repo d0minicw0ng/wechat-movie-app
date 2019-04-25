@@ -1,0 +1,8 @@
+<view class="movie-container">
+  <image class="movie-poster" src="{{movie.image}}"></image>
+  <view class="movie-title">{{movie.title}}</view>
+
+  <textarea class="review-input" placeholder='输入你的影评内容...' placeholder-style='color: lightgray;' auto-focus="true"></textarea>
+</view>
+
+<button class="finish" type="primary">完成</button>
