@@ -16,8 +16,8 @@ CREATE TABLE users (
 
 CREATE TABLE reviews (
   id serial PRIMARY KEY,
-  movie_id INTEGER references movies(id),
-  user_id INTEGER references users(id),
+  movie_id INTEGER references movies(id) NOT NULL,
+  user_id INTEGER references users(id) NOT NULL,
   content TEXT,
   audio bytea,
   created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,

@@ -1,0 +1,16 @@
+<view class="movie-container">
+  <image class="movie-poster" src="{{movie.image}}"></image>
+  <view class="movie-title">{{movie.title}}</view>
+
+  <view class="reviewer">
+    <image src="{{currentUser.profile_image}}" class="profile-image"></image>
+    <view class="username">{{currentUser.username}}的影评</view>
+  </view>
+
+  <view class="pending-review">{{pendingReview}}</view>
+
+  <view class="navbar-bottom">
+    <navigator url="/pages/new_text_review/new_text_review?movie_id={{movie.id}}" class="navbar">重新编辑</navigator>
+    <view class="navbar" bindtap="submitReview">发布影评</view>
+  </view>
+</view>

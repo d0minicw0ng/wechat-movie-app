@@ -12,3 +12,19 @@
 page {
   background-color: #edeeef;
 }
+
+.navbar-bottom {
+  border-top: 1rpx solid lightgrey;
+  background-color: white;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 30rpx;
+}
+
+.navbar {
+  color: lightgrey;
+  flex-grow: 1;
+  text-align: center;
+}

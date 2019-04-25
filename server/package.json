@@ -23,6 +23,7 @@
   "dependencies": {
     "koa": "latest",
     "pg": "latest",
-    "koa-router": "latest"
+    "koa-router": "latest",
+    "koa-bodyparser": "latest"
   }
 }

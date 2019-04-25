@@ -23,5 +23,23 @@ module.exports = {
     await pg.end();
 
     ctx.body = reviews;    
+  },
+
+  create: async (ctx, next) => {
+    const pg = new Client(config.pgConfig);
+    await pg.connect();
+    const body = ctx.request.body;
+    // NOTE: I am just going to hard code id to 1 as we don't have a login system.
+    const res = await pg.query('INSERT INTO REVIEWS (movie_id, user_id, content) VALUES ($1, $2, $3) RETURNING id', [body.movie_id, body.user_id, body.content]);
+    const review = {
+      id: res.rows[0].id,
+      movie_id: body.movie_id,
+      user_id: body.user_id,
+      content: body.content,
+    };
+
+    await pg.end();
+
+    ctx.body = review; 
   }
 }
