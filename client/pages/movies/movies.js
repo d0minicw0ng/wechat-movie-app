@@ -25,12 +25,5 @@ Page({
         console.error(err);
       }
     })
-  },
-
-  goToMoviePage(event) {
-    const movieId = event.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: `/pages/movie/movie?id=${movieId}`,
-    })
   }
 })

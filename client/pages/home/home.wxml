@@ -8,7 +8,7 @@
   </view>
 
   <view class="navbar-bottom">
-    <view class="navbar" bindtap="goToPopularMoviesPage">热门</view>
-    <view class="navbar" bindtap="goToMyFavoriteReviewsPage">我的</view>
+    <navigator url="/pages/movies/movies" class="navbar">热门</navigator>
+    <navigator url="/pages/my_favorite_reviews/my_favorite_reviews" class="navbar">我的</navigator>
   </view>
 </view>

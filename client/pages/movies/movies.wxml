@@ -1,9 +1,9 @@
 <view class="movies-container">
-  <view class="movie" wx:for="{{movies}}" wx:key="id" bindtap="goToMoviePage" data-id="{{item.id}}">
+  <navigator class="movie" wx:for="{{movies}}" wx:key="id" url="/pages/movie/movie?id={{item.id}}">
     <image class="movie-poster" src="{{item.image}}"></image>
     <view class="movie-description">
       <view class="movie-title">{{item.title}}</view>
       <view class="movie-category">{{item.category}}</view>
     </view>
-  </view>
+  </navigator>
 </view>

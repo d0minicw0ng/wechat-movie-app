@@ -15,6 +15,6 @@
   </view>
 </view>
 
-<navigator url="/pages/home/home">
-  <view class="navigate-back">回到首页</view>
+<navigator url="/pages/home/home" class="navigate-back">
+  回到首页
 </navigator>
