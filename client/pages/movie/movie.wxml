@@ -5,6 +5,6 @@
 
   <view class="reviews-navigation">
     <view class="check-reviews">查看影评</view>
-    <view class="add-review">添加影评</view>
+    <view class="add-review" bindtap="showActionSheet">添加影评</view>
   </view>
 </view>

@@ -27,5 +27,24 @@ Page({
         console.error(error);
       }
     })
+  },
+
+  showActionSheet() {
+    wx.showActionSheet({
+      itemList: ['文字', '音频'],
+      itemColor: '',
+      success: function(res) {
+        console.log(res);
+        if (res.tapIndex === 0) {
+          wx.navigateTo({
+            url: `/pages/new_text_review/new_text_review?movie_id=${this.data.movie.id}`
+          });
+        } else if (res.tapIndex === 1) {
+          // TODO: audio
+        }
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    });
   }
 })
