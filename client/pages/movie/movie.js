@@ -42,7 +42,9 @@ Page({
             url: `/pages/new_text_review/new_text_review?movie_id=${movieId}`
           });
         } else if (res.tapIndex === 1) {
-          // TODO: audio
+          wx.navigateTo({
+            url: `/pages/new_audio_review/new_audio_review?movie_id=${movieId}`
+          });
         }
       },
       fail: function(res) {},

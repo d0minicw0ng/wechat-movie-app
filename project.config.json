@@ -14,7 +14,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.6",
-	"appid": "wx5500d6158e7eefea",
+	"appid": "touristappid",
 	"projectname": "movie",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -74,6 +74,13 @@
 					"id": 4,
 					"name": "Reviews page",
 					"pathName": "pages/reviews_list/reviews_list",
+					"query": "movie_id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "New audio review page",
+					"pathName": "pages/new_audio_review/new_audio_review",
 					"query": "movie_id=1",
 					"scene": null
 				}
