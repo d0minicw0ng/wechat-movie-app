@@ -9,6 +9,7 @@ router.get('/reviews/random', reviewController.random);
 router.get('/reviews/my_favorites', reviewController.myFavorites);
 router.get('/reviews', reviewController.list);
 router.post('/reviews', reviewController.create);
+router.post('/audio_reviews', reviewController.createAudio);
 
 router.get('/movies/popular', movieController.popular);
 router.get('/movies/:id', movieController.findOne);

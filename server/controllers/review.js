@@ -1,5 +1,6 @@
 const config = require('../config');
 const { Client } = require('pg');
+const fs = require('fs');
 
 module.exports = {
   random: async (ctx, next) => {
@@ -29,6 +30,7 @@ module.exports = {
     const pg = new Client(config.pgConfig);
     await pg.connect();
     const body = ctx.request.body;
+
     // NOTE: I am just going to hard code id to 1 as we don't have a login system.
     const res = await pg.query('INSERT INTO REVIEWS (movie_id, user_id, content) VALUES ($1, $2, $3) RETURNING id', [body.movie_id, body.user_id, body.content]);
     const review = {
@@ -39,7 +41,49 @@ module.exports = {
     };
 
     await pg.end();
+    ctx.body = review; 
+  },
 
+  createAudio: async (ctx, next) => {
+    const pg = new Client(config.pgConfig);
+    await pg.connect();
+    const body = ctx.request.body;
+    const file = ctx.request.files.file;
+
+    // NOTE: I am just going to hard code id to 1 as we don't have a login system.
+    const cloudinary = require('cloudinary').v2;
+    cloudinary.config({
+      cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+      api_key: process.env.CLOUDINARY_API_KEY,
+      api_secret: process.env.CLOUDINARY_API_SECRET,
+    });
+
+    const uploadPromise = new Promise((resolve, reject) => {
+      cloudinary.uploader.upload(
+        file.path,
+        { resource_type: 'video' },
+        function(error, result) {
+          if (error) {
+            return reject(error);
+          }
+
+          resolve(result);
+        }
+      );
+    });
+
+    const result = await uploadPromise;
+    console.log(result);
+    const audioUrl = result.secure_url;
+    const res = await pg.query('INSERT INTO REVIEWS (movie_id, user_id, audio_url) VALUES ($1, $2, $3) RETURNING id', [body.movie_id, body.user_id, audioUrl]);
+    const review = {
+      id: res.rows[0].id,
+      movie_id: body.movie_id,
+      user_id: body.user_id,
+      audio_url: audioUrl,
+    };
+    
+    await pg.end();
     ctx.body = review; 
   },
 

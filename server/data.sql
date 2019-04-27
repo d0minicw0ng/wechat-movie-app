@@ -19,7 +19,7 @@ CREATE TABLE reviews (
   movie_id INTEGER references movies(id) NOT NULL,
   user_id INTEGER references users(id) NOT NULL,
   content TEXT,
-  audio bytea,
+  audio_url varchar(255),
   created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
 );

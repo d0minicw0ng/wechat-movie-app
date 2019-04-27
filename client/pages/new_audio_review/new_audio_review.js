@@ -83,9 +83,48 @@ Page({
     innerAudioContext.play();
   },
 
-  goToCheckAudioReviewPage() {
-    wx.navigateTo({
-      url: `/pages/check_review/check_audio_review?movie_id=${this.data.movie.id}`,
-    });
+  submitReview() {
+    const movieId = this.data.movie.id;
+
+    wx.uploadFile({
+      url: `${config.serverBaseUrl}/audio_reviews`,
+      filePath: this.data.audioFile,  
+      name: 'file',
+      formData: {
+        user_id: 1, // HACK: hardcoding to 1
+        movie_id: movieId,
+      },
+      header: {
+        'content-type': 'multipart/form-data'
+      },
+      success(res) {
+        const data = res.data
+        // do something
+      }
+    })
+
+    // const fileSystemManager = wx.getFileSystemManager()
+    // fileSystemManager.readFile({
+    //   filePath: this.data.audioFile,
+    //   encoding: 'binary',
+    //   success: (res) => {
+    //     wx.request({
+    //       url: `${config.serverBaseUrl}/reviews`,
+    //       method: 'POST',
+    //       data: {
+    //         audio: res.data,
+    //         user_id: 1, // HACK: hardcoding to 1
+    //         movie_id: movieId,
+    //       },
+    //       success: res => {
+    //         wx.removeStorageSync('current_pending_audio_review_content');        
+    //         const reviewId = res.data.id;
+    //         wx.navigateTo({
+    //           url: `/pages/reviews_list/reviews_list?movie_id=${movieId}`,
+    //         });
+    //       }
+    //     })
+    //   }
+    // });
   }
 })

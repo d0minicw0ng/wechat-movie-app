@@ -1,8 +1,13 @@
 const Koa = require('koa');
 const app = new Koa();
 
-const bodyParser = require('koa-bodyparser');
-app.use(bodyParser());
+const body = require('koa-body');
+app.use(body({
+  multipart: true,
+  formidable: {
+      keepExtensions: true,
+  }
+}));
 
 const router = require('./routes');
 app.use(router.routes());

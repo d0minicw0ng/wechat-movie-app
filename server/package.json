@@ -25,7 +25,9 @@
     "koa": "latest",
     "pg": "latest",
     "koa-router": "latest",
-    "koa-bodyparser": "latest"
+    "aws-sdk": "latest",
+    "koa-body": "latest",
+    "cloudinary": "latest"
   },
   "engines": {
     "node": "10.x"

@@ -7,4 +7,4 @@
   <button class="play-review" bindtap="playReview" wx:if="{{!!audioFile}}">播放录音</button>
 </view>
 
-<button class="finish" type="primary" bindtap="goToCheckAudioReviewPage" disabled='{{!audioFile}}'>完成</button>
+<button class="finish" type="primary" bindtap="submitReview" disabled='{{!audioFile}}'>完成</button>
