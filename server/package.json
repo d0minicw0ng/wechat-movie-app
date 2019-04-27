@@ -4,7 +4,8 @@
   "description": "WeChat movies app ",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,8 @@
     "pg": "latest",
     "koa-router": "latest",
     "koa-bodyparser": "latest"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }
