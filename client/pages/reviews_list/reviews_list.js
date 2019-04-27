@@ -1,4 +1,5 @@
-// client/pages/reviews_list/reviews_list.js
+const config = require('../../config');
+
 Page({
 
   /**
@@ -18,7 +19,7 @@ Page({
   
   getReviews(movieId) {
     wx.request({
-      url: `http://localhost:3000/reviews?movie_id=${movieId}`,
+      url: `${config.serverBaseUrl}/reviews?movie_id=${movieId}`,
       method: 'GET',
       success: res => {
         const reviews = res.data;

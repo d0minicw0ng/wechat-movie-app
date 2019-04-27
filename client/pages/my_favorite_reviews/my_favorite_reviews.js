@@ -1,4 +1,5 @@
-// client/pages/my_favorite_reviews/my_favorite_reviews.js
+const config = require('../../config');
+
 Page({
 
   /**
@@ -17,7 +18,7 @@ Page({
 
   getMyFavoriteReviews() {
     wx.request({
-      url: 'http://localhost:3000/reviews/my_favorites',
+      url: `${config.serverBaseUrl}/reviews/my_favorites`,
       success: res => {
         const reviews = res.data;
         this.setData({ reviews });

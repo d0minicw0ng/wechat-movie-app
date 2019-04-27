@@ -1,3 +1,5 @@
+const config = require('../../config');
+
 Page({
 
   /**
@@ -21,7 +23,7 @@ Page({
 
   getMovie(id) {
     wx.request({
-      url: `http://localhost:3000/movies/${id}`,
+      url: `${config.serverBaseUrl}/movies/${id}`,
       success: res => {
         const movie = res.data;
         this.setData({ movie });
@@ -35,7 +37,7 @@ Page({
   getCurrentUser() {
     // NOTE: Hardcoing id as 1 because we don't have a login system
     wx.request({
-      url: `http://localhost:3000/users/1`,
+      url: `${config.serverBaseUrl}/users/1`,
       success: res => {
         const currentUser = res.data;
         this.setData({ currentUser });
@@ -55,7 +57,7 @@ Page({
     const movieId = this.data.movie.id;
 
     wx.request({
-      url: 'http://localhost:3000/reviews',
+      url: `${config.serverBaseUrl}/reviews`,
       method: 'POST',
       data: { 
         content: this.data.pendingReview,

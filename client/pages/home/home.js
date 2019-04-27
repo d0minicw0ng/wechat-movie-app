@@ -1,6 +1,6 @@
-// client/pages/home/home.js
-Page({
+const config = require('../../config');
 
+Page({
   /**
    * Page initial data
    */
@@ -17,7 +17,7 @@ Page({
 
   getRandomReview() {
     wx.request({
-      url: 'http://localhost:3000/reviews/random',
+      url: `${config.serverBaseUrl}/reviews/random`,
       success: res => {
         this.setData({ randomReview: res.data });
       },

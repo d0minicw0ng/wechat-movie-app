@@ -15,5 +15,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "看看侃侃电影",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

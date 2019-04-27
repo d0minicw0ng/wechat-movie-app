@@ -1,4 +1,5 @@
-// client/pages/movie/movie.js
+const config = require('../../config');
+
 Page({
 
   /**
@@ -29,7 +30,7 @@ Page({
 
   getMovie(id) {
     wx.request({
-      url: `http://localhost:3000/movies/${id}`,
+      url: `${config.serverBaseUrl}/movies/${id}`,
       success: res => {
         const movie = res.data;
         this.setData({ movie });

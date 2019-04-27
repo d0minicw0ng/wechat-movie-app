@@ -1,4 +1,5 @@
-// client/pages/movies/movies.js
+const config = require('../../config');
+
 Page({
 
   /**
@@ -17,7 +18,7 @@ Page({
 
   getPopularMovies() {
     wx.request({
-      url: 'http://localhost:3000/movies/popular',
+      url: `${config.serverBaseUrl}/movies/popular`,
       success: res => {
         this.setData({ movies: res.data });
       },
