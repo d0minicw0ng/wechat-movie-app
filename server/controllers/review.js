@@ -73,14 +73,15 @@ module.exports = {
     });
 
     const result = await uploadPromise;
-    console.log(result);
     const audioUrl = result.secure_url;
-    const res = await pg.query('INSERT INTO REVIEWS (movie_id, user_id, audio_url) VALUES ($1, $2, $3) RETURNING id', [body.movie_id, body.user_id, audioUrl]);
+    const duration = result.duration;
+    const res = await pg.query('INSERT INTO REVIEWS (movie_id, user_id, audio_url, duration) VALUES ($1, $2, $3, $4) RETURNING id', [body.movie_id, body.user_id, audioUrl, duration]);
     const review = {
       id: res.rows[0].id,
       movie_id: body.movie_id,
       user_id: body.user_id,
       audio_url: audioUrl,
+      duration: duration,
     };
     
     await pg.end();

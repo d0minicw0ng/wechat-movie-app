@@ -20,6 +20,7 @@ CREATE TABLE reviews (
   user_id INTEGER references users(id) NOT NULL,
   content TEXT,
   audio_url varchar(255),
+  duration numeric(5, 2),
   created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
