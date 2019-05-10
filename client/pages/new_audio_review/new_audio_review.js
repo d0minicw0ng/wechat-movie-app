@@ -98,33 +98,13 @@ Page({
         'content-type': 'multipart/form-data'
       },
       success(res) {
-        const data = res.data
-        // do something
+        const data = res.data;   
+        wx.removeStorageSync('current_pending_audio_review_content');
+        const reviewId = data.id;
+        wx.navigateTo({
+          url: `/pages/reviews_list/reviews_list?movie_id=${movieId}`,
+        }) 
       }
-    })
-
-    // const fileSystemManager = wx.getFileSystemManager()
-    // fileSystemManager.readFile({
-    //   filePath: this.data.audioFile,
-    //   encoding: 'binary',
-    //   success: (res) => {
-    //     wx.request({
-    //       url: `${config.serverBaseUrl}/reviews`,
-    //       method: 'POST',
-    //       data: {
-    //         audio: res.data,
-    //         user_id: 1, // HACK: hardcoding to 1
-    //         movie_id: movieId,
-    //       },
-    //       success: res => {
-    //         wx.removeStorageSync('current_pending_audio_review_content');        
-    //         const reviewId = res.data.id;
-    //         wx.navigateTo({
-    //           url: `/pages/reviews_list/reviews_list?movie_id=${movieId}`,
-    //         });
-    //       }
-    //     })
-    //   }
-    // });
+    });
   }
 })
