@@ -5,7 +5,8 @@
     <image class="poster" src="{{item.image}}"></image>
     <view class="review-data">
       <view class="review-title">{{item.title}}</view>
-      <view class="review-content" wx:if="{{item.content}}">{{item.content}}</view>
+      <view class="review-content" wx:if="{{!!item.content}}">{{item.content}}</view>
+      <view class="review-audio" wx:if="{{!!item.audio_url}}" bindtap="playAudio" data-url="{{item.audio_url}}"><view class="duration">{{item.duration}}s</view></view>
 
       <view class="reviewer">
         <image class="profile-image" src="{{item.profile_image}}"></image>

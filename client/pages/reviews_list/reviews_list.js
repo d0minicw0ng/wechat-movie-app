@@ -34,8 +34,6 @@ Page({
       url: url,
       success(res) {
         if (res.statusCode === 200) {
-          console.log(res);
-          console.log(res.tempFilePath);
           wx.playVoice({
             filePath: res.tempFilePath,
           })

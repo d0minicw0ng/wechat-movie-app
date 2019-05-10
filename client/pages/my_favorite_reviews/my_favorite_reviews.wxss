@@ -48,3 +48,9 @@
   margin-left: 10rpx;
   margin-top: 5rpx;
 }
+
+.duration {
+  background-color: lightgray;
+  padding: 10rpx;
+  width: 30%;
+}
