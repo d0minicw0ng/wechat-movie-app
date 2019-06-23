@@ -8,6 +8,7 @@ const favoriteController = require('../controllers/favorite.js');
 
 router.get('/reviews/random', reviewController.random);
 router.get('/reviews/my_favorites', reviewController.myFavorites);
+router.get('/reviews/my_published', reviewController.myPublished);
 router.get('/reviews', reviewController.list);
 router.get('/reviews/:id', reviewController.findOne);
 router.post('/reviews', reviewController.create);

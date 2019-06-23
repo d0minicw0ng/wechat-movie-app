@@ -26,6 +26,18 @@ module.exports = {
     ctx.body = reviews;    
   },
 
+  myPublished: async (ctx, next) => {
+    const pg = new Client(config.pgConfig);
+    await pg.connect();
+    // NOTE: I am just going to hard code id to 1 as we don't have a login system.
+    const res = await pg.query('SELECT r.content, r.audio_url, r.duration, m.title, m.image, u.username, u.profile_image FROM reviews r JOIN movies m ON r.movie_id = m.id JOIN users u ON r.user_id = u.id WHERE r.user_id = $1 ORDER BY r.created_at DESC', [1]);
+    const reviews = res.rows;
+
+    await pg.end();
+
+    ctx.body = reviews;    
+  },
+
   create: async (ctx, next) => {
     const pg = new Client(config.pgConfig);
     await pg.connect();
