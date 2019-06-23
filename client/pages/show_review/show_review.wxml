@@ -1,0 +1,19 @@
+<view class="review-container">
+  <image class="movie-poster" src="{{review.image}}"></image>
+  <view class="movie-title">{{review.title}}</view>
+
+  <view class="reviewer">
+    <image src="{{review.profile_image}}" class="profile-image"></image>
+    <view class="username">{{review.username}}的影评</view>
+  </view>
+
+  <view class="content" wx:if="{{!!review.content}}">{{review.content}}</view>
+  <view class="audio" wx:if="{{!!review.audio_url}}">
+    <view class="play-audio" bindtap="playAudio" data-url="{{review.audio_url}}">{{review.duration}}s</view>
+  </view>
+
+  <view class="navbar-bottom">
+    <navigator url="/pages/new_text_review/new_text_review?movie_id={{movie.id}}" class="navbar">收藏影评</navigator>
+    <view class="navbar" bindtap="submitReview">写影评</view>
+  </view>
+</view>

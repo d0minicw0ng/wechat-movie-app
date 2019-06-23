@@ -9,7 +9,8 @@
     "pages/new_text_review/new_text_review",
     "pages/new_audio_review/new_audio_review",
     "pages/check_review/check_review",
-    "pages/reviews_list/reviews_list"
+    "pages/reviews_list/reviews_list",
+    "pages/show_review/show_review"
   ],
   "window": {
     "backgroundTextStyle": "light",
