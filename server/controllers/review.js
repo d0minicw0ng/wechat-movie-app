@@ -102,7 +102,7 @@ module.exports = {
   findOne: async (ctx, next) => {
     const pg = new Client(config.pgConfig);
     await pg.connect();
-    const res = await pg.query('SELECT r.content, r.audio_url, r.duration, m.title, m.image, u.username, u.profile_image FROM reviews r JOIN movies m ON r.movie_id = m.id JOIN users u ON r.user_id = u.id WHERE r.id = $1', [ctx.params.id]);
+    const res = await pg.query('SELECT r.id, r.movie_id, r.content, r.audio_url, r.duration, m.title, m.image, u.username, u.profile_image FROM reviews r JOIN movies m ON r.movie_id = m.id JOIN users u ON r.user_id = u.id WHERE r.id = $1', [ctx.params.id]);
     const review = res.rows[0];
 
     await pg.end();
