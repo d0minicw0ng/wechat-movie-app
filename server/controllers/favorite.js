@@ -13,7 +13,7 @@ module.exports = {
     if (res.rows.length > 0) {
         await pg.end();
         ctx.body = exists[0];
-    else {
+    } else {
         // NOTE: I am just going to hard code id to 1 as we don't have a login system.
         const res = await pg.query('INSERT INTO user_favorite_reviews (review_id, user_id) VALUES ($1, $2) RETURNING id', [body.review_id, 1]);
         const favorite = {
