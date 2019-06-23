@@ -7,6 +7,7 @@ Page({
    */
   data: {
     reviews: [],
+    showFavorites: true,
   },
 
   /**
@@ -27,6 +28,29 @@ Page({
         console.error(error);
       }
     })
+  },
+
+  getMyPublishedReviews() {
+    wx.request({
+      url: `${config.serverBaseUrl}/reviews/my_published`,
+      success: res => {
+        const reviews = res.data;
+        this.setData({ reviews });
+      },
+      fail: error => {
+        console.error(error);
+      }
+    })
+  },
+
+  toggleShowFavorites() {
+    const shouldShowFavorites = !this.data.showFavorites;
+    this.setData({ showFavorites: shouldShowFavorites });
+    if (shouldShowFavorites) {
+      this.getMyFavoriteReviews();
+    } else {
+      this.getMyPublishedReviews();
+    }
   },
 
   playAudio(e) {

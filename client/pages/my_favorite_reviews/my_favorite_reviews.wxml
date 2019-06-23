@@ -1,4 +1,5 @@
-<view class="header">收藏的影评</view>
+<view class="header" bindtap="toggleShowFavorites" wx:if="{{showFavorites}}">收藏的影评 ↓</view>
+<view class="header" bindtap="toggleShowFavorites" wx:if="{{!showFavorites}}">我发布的影评 ↓</view>
 
 <view class="reviews-container">
   <navigator class="review" wx:for="{{reviews}}" wx:key="id" url="/pages/show_review/show_review?id={{item.id}}">
