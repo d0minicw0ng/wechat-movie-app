@@ -10,7 +10,7 @@ module.exports = {
 
     const exists = await pg.query('SELECT * FROM user_favorite_reviews WHERE review_id = $1 AND user_id = $2', [body.review_id, 1]);
 
-    if (res.rows.length > 0) {
+    if (exists.rows.length > 0) {
         await pg.end();
         ctx.body = exists[0];
     } else {
