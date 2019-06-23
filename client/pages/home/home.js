@@ -15,6 +15,10 @@ Page({
     this.getRandomReview();
   },
 
+  onPullDownRefresh: function () {
+    this.getRandomReview();
+  },
+
   getRandomReview() {
     wx.request({
       url: `${config.serverBaseUrl}/reviews/random`,
