@@ -36,5 +36,21 @@ Page({
         }
       }
     })
+  },
+
+  collectReview() {
+    wx.request({
+      url: `${config.serverBaseUrl}/favorites`,
+      method: 'POST',
+      data: {
+        review_id: this.data.review.id,
+      },
+      success: res => {
+        const reviewId = res.data.id;
+        wx.navigateTo({
+          url: '/pages/my_favorite_reviews/my_favorite_reviews',
+        });
+      }
+    })
   }
 })
