@@ -30,7 +30,7 @@ Page({
   },
 
   playAudio(e) {
-    const url = e.target.dataset.url;
+    const url = e.currentTarget.dataset.url;
     wx.downloadFile({
       url: url,
       success(res) {
